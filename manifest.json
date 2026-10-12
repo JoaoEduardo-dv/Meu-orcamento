@@ -1,0 +1,19 @@
+
+{
+  "id": "./",
+  "name": "Orçamento de Marcenaria",
+  "short_name": "Orçamentos",
+  "description": "Calcule custos e preços de serviços de marcenaria.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#14513f",
+  "icons": [
+    {
+      "src": "./img/%C3%8Dcone%20Minimalista%20de%20Marcenaria%20e%20C%C3%A1lculo.png",
+      "sizes": "1254x1254",
+      "type": "image/png"
+    }
+  ]
+}
