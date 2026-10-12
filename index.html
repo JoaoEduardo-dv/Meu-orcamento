@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/Ícone Minimalista de Marcenaria e Cálculo.png" type="image/x-icon" id="icone">
+<link rel="stylesheet" href="style.css">
+<title>Orçamento de Marcenaria</title>
+</head>
+<body>
+  <div class="tabuas" aria-hidden="true"></div>
+
+  <main class="pagina">
+    <header class="cabecalho">
+      <!-- Logo: plaina de marceneiro -->
+      <svg class="logo" viewBox="0 0 88 62" role="img" aria-label="Plaina de marceneiro">
+        <path d="M6 40h72l4 6v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V40z" fill="#8a4f24"/>
+        <path d="M4 38h74v6H4z" fill="#2a6b55"/>
+        <path d="M30 8l16-6 12 28-14 6z" fill="#14513f"/>
+        <path d="M18 22l14-4 6 18H16z" fill="#14513f"/>
+        <rect x="46" y="4" width="14" height="10" rx="2" transform="rotate(20 46 4)" fill="#0e3d2f"/>
+        <path d="M70 50h-60" stroke="#b9763c" stroke-width="2"/>
+      </svg>
+      <h1 class="titulo">Orçamento de <strong>Marcenaria</strong></h1>
+    </header>
+    <p class="subtitulo">Preencha os dados e veja o valor do seu orçamento.</p>
+
+    <section class="cartao">
+      <form id="form" novalidate autocomplete="off">
+        <div class="grade">
+          <div class="campo cheio">
+            <label for="nome">Nome da peça</label>
+            <div class="entrada">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
+              <input id="nome" type="text" placeholder="Ex.: Prateleira" maxlength="80">
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="materiais">Materiais (R$)</label>
+            <div class="entrada">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v4c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 10v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4M4 14v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4"/></svg>
+              <input id="materiais" type="text" inputmode="decimal" placeholder="Ex.: 120,00">
+            </div>
+            <p class="erro-msg">Informe um valor válido.</p>
+          </div>
+
+          <div class="campo">
+            <label for="horas">Horas de trabalho</label>
+            <div class="entrada">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <input id="horas" type="text" inputmode="decimal" placeholder="Ex.: 3">
+            </div>
+            <p class="erro-msg">Informe um valor válido.</p>
+          </div>
+
+          <div class="campo">
+            <label for="valorHora">Valor por hora (R$)</label>
+            <div class="entrada">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v4c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 10v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4M4 14v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4"/></svg>
+              <input id="valorHora" type="text" inputmode="decimal" placeholder="Ex.: 50,00">
+            </div>
+            <p class="erro-msg">Informe um valor válido.</p>
+          </div>
+
+          <div class="campo meio">
+            <label for="despesas">Despesas extras (R$)</label>
+            <div class="entrada">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+              <input id="despesas" type="text" inputmode="decimal" placeholder="Ex.: 30,00">
+            </div>
+            <p class="erro-msg">Informe um valor válido.</p>
+          </div>
+
+          <div class="campo meio">
+            <label for="acrescimo">Acréscimo (%)</label>
+            <div class="entrada">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg>
+              <input id="acrescimo" type="text" inputmode="decimal" placeholder="Ex.: 30">
+            </div>
+            <p class="erro-msg">Informe um valor válido.</p>
+          </div>
+        </div>
+
+        <div class="acoes">
+          <button type="submit" class="btn btn-primario">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="8" y="5.5" width="8" height="3.5" rx=".5"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16.5h.01M12 16.5h.01M15.5 16.5h.01" stroke-linecap="round" stroke-width="2.2"/></svg>
+            Calcular orçamento
+          </button>
+          <button type="button" id="limpar" class="btn btn-secundario">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.5-4.5L3 9M3 4v5h5M4 13a8 8 0 0 0 14.5 4.5L21 15M21 20v-5h-5"/></svg>
+            Limpar
+          </button>
+        </div>
+      </form>
+
+      <div class="resultado" aria-live="polite">
+        <div>
+          <span class="rotulo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v4c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 10v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4M4 14v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4"/></svg>
+            Custo total
+          </span>
+          <span class="valor" id="custo">R$ 0,00</span>
+        </div>
+        <div>
+          <span class="rotulo">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 12.2V4a1 1 0 0 1 1-1h8.2a1 1 0 0 1 .7.3l8 8a1 1 0 0 1 0 1.4l-7.2 7.2a1 1 0 0 1-1.4 0l-8-8a1 1 0 0 1-.3-.7zM7.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+            Preço sugerido
+          </span>
+          <span class="valor" id="preco">R$ 0,00</span>
+        </div>
+      </div>
+
+      <button type="button" id="copiar" class="btn btn-copiar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="12" height="15" rx="2"/><path d="M16 21H6a2 2 0 0 1-2-2V7"/></svg>
+        <span id="copiarTexto">Copiar resumo</span>
+      </button>
+    </section>
+
+    <p class="rodape">Trabalho bem feito tem valor.</p>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
